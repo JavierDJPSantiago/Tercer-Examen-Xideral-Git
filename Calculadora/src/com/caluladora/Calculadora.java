@@ -27,6 +27,8 @@ public class Calculadora {
 		
 		//Objeto scanner para ingreso de valores solicitados al usuario que utiliza la calculadora 
 		Scanner usuario = new Scanner(System.in);
+		
+		//Valor para la selección de la operación
 		int seleccionDeNumero = usuario.nextInt();
 
 		System.out.println("Por favor inserte un número en formato decimal (Ejemplo: 5.0): ");

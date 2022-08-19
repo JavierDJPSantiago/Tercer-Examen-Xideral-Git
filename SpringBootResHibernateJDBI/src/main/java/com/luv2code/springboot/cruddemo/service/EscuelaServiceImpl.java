@@ -17,7 +17,9 @@ public class EscuelaServiceImpl implements EscuelaService {
 	private EscuelaDAO escuelaDAO;
 	
 	@Autowired
-	public EscuelaServiceImpl(@Qualifier("escuelaDAOJdbcImpl")EscuelaDAO theEscuelaDAO) {
+						   // @Qualifier permite elegir la implementación deseada: JDBC o Hibernate
+	                       // @Qualifier("escuelaDAOJdbcImpl")
+	public EscuelaServiceImpl(@Qualifier("escuelaDAOHibernateImpl")EscuelaDAO theEscuelaDAO) {
 		escuelaDAO = theEscuelaDAO;
 	}
 	
