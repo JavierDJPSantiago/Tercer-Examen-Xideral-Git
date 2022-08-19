@@ -4,14 +4,15 @@ import java.util.*;
 import java.util.function.DoubleBinaryOperator;
 import java.util.function.IntBinaryOperator;
 import java.lang.Math;
+import java.text.DecimalFormat;
 
 public class Calculadora {
 
 	//Variables static para métodos ejecutaOperacionesConEnteros y ejecutaOperacionesConDecimales
-	static double numero1;
-	static double numero2;
-	static int numero1EnInt;
-	static int numero2EnInt;
+	private static double numero1;
+	private static double numero2;
+	private static int numero1EnInt;
+	private static int numero2EnInt;
 
 	public static void main(String[] args) {
 		
@@ -143,9 +144,12 @@ public class Calculadora {
 
 	
 	
+	
+
+
+
 	//Método para ejecutar las operaciones añadidas en la lista: listaDeOperacionesConDecimales
 	static void ejecutaOperacionesConDecimales(List<DoubleBinaryOperator> listOperaciones) {
-
 		for (DoubleBinaryOperator ope : listOperaciones) {
 			try {
 				System.out.println(ope.applyAsDouble(numero1, numero2));
